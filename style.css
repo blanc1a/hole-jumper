@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#demo {
+  width: 600px;
+  height: 400px;
+}
+
+.catWrapper {
+  /* border: solid 1px red; */
+  border-radius: 50%;
+  width: 100%; /*to fill in the entire demo container*/
+  height: 305px; /*going to help position the cat at the bottom of it*/
+  overflow: hidden; /*we moved the cat down by -70px but we don't want to see it outsite of the catWrapper Container => overflow: hidden*/
+}
+
+.cat {
+  position: absolute;
+  bottom: 0px; /*to make the cat come out of the hole, we have to put it more down by using a tween in javascript*/
+  left: 200px;
+  height: 200px;
+}
+
+.hole {
+  /*creates the hole*/
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  left: 200px;
+  top: 290px;
+}
+
+.shadow {
+  opacity: 0;
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  left: 200px;
+  top: 290px;
+  background: radial-gradient(rgb(100, 100, 100, 0.6), rgb(0, 0, 0, 0) 75%);
+  background-repeat: no-repeat;
+}
